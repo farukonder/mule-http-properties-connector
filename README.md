@@ -13,8 +13,8 @@ Add this dependency to your application pom.xml
 ```xml
 <dependency>
 	<groupId>github.com.farukonder.mule4.connectors</groupId>
-	<artifactId>mule-http-properties-connector</artifactId>
-	<version>0.0.1</version>
+	<artifactId>secure-http-properties-connector</artifactId>
+	<version>0.0.10</version>
 	<classifier>mule-plugin</classifier>
 </dependency>
 ```
@@ -26,11 +26,11 @@ put below xml snipped in your pom.xml file. and run mvn deploy in order to put t
 ```xml
 	<distributionManagement>
 		<repository>
-			<id>cci-repo-mule</id>
+			<id>repo-mule</id>
 			<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
 		</repository>
 		<snapshotRepository>
-			<id>cci-repo-mule</id>
+			<id>repo-mule</id>
 			<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
 		</snapshotRepository>
 	</distributionManagement>
