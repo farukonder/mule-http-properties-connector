@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:secure-http-properties="http://www.mulesoft.org/schema/mule/secure-http-properties"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/secure-http-properties http://www.mulesoft.org/schema/mule/coca-cola-urlproperties-extention/current/secure-http-properties.xsd">
+
+    <secure-http-properties:config name="config" configId="configId">
+        <secure-http-properties:connection requiredParameter="aValue" />
+    </secure-http-properties:config>
+
+    <flow name="sayHiFlow">
+        <secure-http-properties:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <secure-http-properties:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>

@@ -1,0 +1,27 @@
+{
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE",
+  "extensionModelLoaderDescriptor": {
+    "id": "crafted",
+    "attributes": {
+      "type": "github.com.farukonder.mule4.connector.secureHttpProp.SecureHttpPropertiesExtensionLoadingDelegate"
+    }
+  },
+  "name": "secure-http-properties",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [
+       "github.com.farukonder.mule4.connector.secureHttpProp",
+       "com.mulesoft.modules"
+       ],
+      "exportedResources": [
+        "META-INF/services/org.mule.runtime.config.api.dsl.model.properties.ConfigurationPropertiesProviderFactory"
+       ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
