@@ -14,7 +14,7 @@ One approach would be, without considering vault tools due to some reasons, putt
 
 As can be seen, properties can  only be red only respective environment. 
 
-![alt](./content/secure-http-prop.drawio.png)
+![alt](./content/secure-http-prop.png)
 
 To protect the values itself, we need to encrypt those to prevent seeing from unauthorized eyes. In some cases, nonprod password, mostly dev can be very easy to speed up the development but abviously prod is not. 
 
