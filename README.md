@@ -15,7 +15,7 @@ One approach would be, without considering vault tools due to some reasons, putt
 
 Using ACLs ensures that properties can only be read within their respective environments.
 
-![alt](./content/secure-http-prop.png)
+![alt](./content/secure-http-prop-2.png)
 
 To safeguard the values themselves, it is essential to encrypt them to prevent unauthorized access. In certain instances, non-production passwords, especially in development environments, may be kept less complex to expedite development. However, it is evident that production passwords should not follow the same approach. 
 
