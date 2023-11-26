@@ -21,14 +21,16 @@ To safeguard the values themselves, it is essential to encrypt them to prevent u
 
 dev.properties file
 ```
-billing.db.url=jdbc://devdb
+billing.db.url=jdbc://devdb.local
+billing.db.name=billing
 billing.db.user=integration_user
 billing.db.pass=devPass123
 ```
 
 prod.properties file
 ```
-billing.db.url=jdbc://proddb
+billing.db.url=jdbc://proddb.local
+billing.db.name=billing
 billing.db.user=integration_user
 billing.db.pass=![encrypted-prod-passw]
 ```
@@ -81,6 +83,19 @@ like location, key and algorithm also can be pull from CI/CD. in order to manage
 <secure-http-properties:config doc:name="Http Properties Config" doc:id="0720a68d-e738-461e-a1a0-fd4c4ada9c32"
 	name="Http_Properties_Config" 
 	httpPath="${propertyUrl}" algorithm="${algorithm}" key="${key}">
+```
+
+## referencing to property
+
+those properties can be referenced as usual
+
+```xml
+<db:config name="Database_Config_MSSQL"
+	doc:name="Database Config"
+	doc:id="499da03a-3c77-4d9d-83e4-59ab21774c5e">
+	<db:generic-connection
+		url="jdbc:sqlserver://${billing.db.url};databaseName=${billing.db.name};user=${billing.db.user};password=${billing.db.pass};encrypt=true;trustServerCertificate=true"
+		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 ```
 
 ## publish
