@@ -68,17 +68,17 @@ like location, key and algorithm also can be pull from CI/CD. in order to manage
 
 
 ```xml
-	<global-property doc:name="Global Property" doc:id="69c8c29a-21fc-409e-a104-635334980abb" 
-		name="env" value="qa" />
-	<global-property doc:name="Global Property" doc:id="ad915c98-1fca-4d46-86dc-06c19da8b3d9" 
-		name="propertyUrl" value="https://get.my.property.local" />
-	<global-property doc:name="Global Property" doc:id="550ec493-6ce6-4141-a012-cb80b81b81s4" 
-		name="key" value="super-secret" />
-	<global-property doc:name="Global Property" doc:id="5v0ec493-6ce6-4141-a012-zb8fb81b8143" 
-		name="algorithm" value="Blowfish" />
-	<secure-http-properties:config doc:name="Http Properties Config" doc:id="0720a68d-e738-461e-a1a0-fd4c4ada9c32"
-		name="Http_Properties_Config" 
-		httpPath="${propertyUrl}" algorithm="${algorithm}" key="${key}">
+<global-property doc:name="Global Property" doc:id="69c8c29a-21fc-409e-a104-635334980abb" 
+	name="env" value="qa" />
+<global-property doc:name="Global Property" doc:id="ad915c98-1fca-4d46-86dc-06c19da8b3d9" 
+	name="propertyUrl" value="https://get.my.property.local" />
+<global-property doc:name="Global Property" doc:id="550ec493-6ce6-4141-a012-cb80b81b81s4" 
+	name="key" value="super-secret" />
+<global-property doc:name="Global Property" doc:id="5v0ec493-6ce6-4141-a012-zb8fb81b8143" 
+	name="algorithm" value="Blowfish" />
+<secure-http-properties:config doc:name="Http Properties Config" doc:id="0720a68d-e738-461e-a1a0-fd4c4ada9c32"
+	name="Http_Properties_Config" 
+	httpPath="${propertyUrl}" algorithm="${algorithm}" key="${key}">
 ```
 
 ## publish
@@ -86,16 +86,16 @@ like location, key and algorithm also can be pull from CI/CD. in order to manage
 put below xml snipped in your pom.xml file. and run mvn deploy in order to put this jar to artifact repository
 
 ```xml
-	<distributionManagement>
-		<repository>
-			<id>repo-mule</id>
-			<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
-		</repository>
-		<snapshotRepository>
-			<id>repo-mule</id>
-			<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
-		</snapshotRepository>
-	</distributionManagement>
+<distributionManagement>
+	<repository>
+		<id>repo-mule</id>
+		<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
+	</repository>
+	<snapshotRepository>
+		<id>repo-mule</id>
+		<url>https://pkgs.dev.azure.com/$organization/$project/_packaging/cci-repo-mule/maven/v1</url>
+	</snapshotRepository>
+</distributionManagement>
 ```
 
 **know issues**
