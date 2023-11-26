@@ -126,3 +126,6 @@ put below xml snipped in your pom.xml file. and run mvn deploy in order to put t
  - https://github.com/amitsethi0843/mule4-url-property-placeholder
  - https://docs.mulesoft.com/mule-runtime/4.2/custom-configuration-properties-provider
  - https://www.linkedin.com/pulse/mule4-loading-properties-file-from-httphttps-url-amit-sethi-1d/
+
+**license**
+ The licenses associated with this connector may potentially conflict. It is your sole decision whether to use this in your projects or not. Please carefully review and assess the licensing terms before incorporating this connector into your projects.
