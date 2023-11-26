@@ -2,6 +2,8 @@
 
 ![splash](./content/splash.png)
 
+[blog](https://farukonder.github.io/thats-enough-cloud-for-today/blog/2023/11/26/secure-http-prop-for-mulesoft.html)
+
 Among the various alternatives for securing your environment variables, a fundamental approach, without relying on a dedicated tool, is to store variables in property files. This method proves efficient and convenient during development. However, as you transition to production, several additional considerations come into play:
  - who can set the variables
  - who can see the variables
