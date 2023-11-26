@@ -76,6 +76,8 @@ like location, key and algorithm also can be pull from CI/CD. in order to manage
 	name="key" value="super-secret" />
 <global-property doc:name="Global Property" doc:id="5v0ec493-6ce6-4141-a012-zb8fb81b8143" 
 	name="algorithm" value="Blowfish" />
+
+<!-- lets use the connector after having env specific metadata-->	
 <secure-http-properties:config doc:name="Http Properties Config" doc:id="0720a68d-e738-461e-a1a0-fd4c4ada9c32"
 	name="Http_Properties_Config" 
 	httpPath="${propertyUrl}" algorithm="${algorithm}" key="${key}">
