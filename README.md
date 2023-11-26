@@ -1,7 +1,8 @@
-Secure property files from http
+## Secure Http Properties Connector
+
 ![splash](./content/splash.png)
 
-Ouf of many alternatives to secure your environment variables, one of the basic approach is - without using a tool  - can be storing your variables in property files. During development this is very fast and convenient. When it comes to production time there are other considerations that you need to consider
+Among the various alternatives for securing your environment variables, a fundamental approach, without relying on a dedicated tool, is to store variables in property files. This method proves efficient and convenient during development. However, as you transition to production, several additional considerations come into play:
  - who can set the variables
  - who can see the variables
  - how to manage different environment variables in relation and coordiantion with each other
@@ -10,13 +11,13 @@ Ouf of many alternatives to secure your environment variables, one of the basic 
  - how to integration variable management with CI/CD
  - how can this be automated
  
-One approach would be, without considering vault tools due to some reasons, putting those in one central place and serving thru this place. To secure  these confidential artifacts, from network level, acl would help.
+One approach would be, without considering vault tools due to some reasons, putting those in one central place and serving thru here. To enhance the security of these sensitive artifacts at the network level, implementing access control lists (ACLs) would be beneficial.
 
-As can be seen, properties can  only be red only respective environment. 
+Using ACLs ensures that properties can only be read within their respective environments.
 
 ![alt](./content/secure-http-prop.png)
 
-To protect the values itself, we need to encrypt those to prevent seeing from unauthorized eyes. In some cases, nonprod password, mostly dev can be very easy to speed up the development but abviously prod is not. 
+To safeguard the values themselves, it is essential to encrypt them to prevent unauthorized access. In certain instances, non-production passwords, especially in development environments, may be kept less complex to expedite development. However, it is evident that production passwords should not follow the same approach. 
 
 dev.properties file
 ```
@@ -41,8 +42,7 @@ mvn clean package -DskipTests
 ```
 
 ## use
-
-Add this dependency to your application pom.xml
+after getting the package ready, add thisas dependency to your application pom.xml
 
 ```xml
 <dependency>
@@ -58,7 +58,7 @@ Add this dependency to your application pom.xml
 mule projects mostly has a confix.xml for just configuration  but in any mule.xml adding connctor conf is enough
 ![connector-define](./content/connector-initiate.png)
 
-with a small set of definitioans
+with a small set of definitions
 ![connector-conf](./content/connector-conf.png)
 
 ## advanced setup
