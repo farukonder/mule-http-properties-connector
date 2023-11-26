@@ -33,7 +33,8 @@ billing.db.user=integration_user
 billing.db.pass=![encrypted-prod-passw]
 ```
 
-in order to use this connector:
+this connector decrypt literals which already encrypted. mule 3 already  has a connector for encryption for clear text.
+//TODO extend this connector to encrypt clear text as well. 
 
 ## compile
 
@@ -41,7 +42,7 @@ in order to use this connector:
 mvn clean package -DskipTests
 ```
 
-## use
+## add  to library
 after getting the package ready, add thisas dependency to your application pom.xml
 
 ```xml
